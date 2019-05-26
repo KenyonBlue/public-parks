@@ -11,32 +11,35 @@
 <agm-map 
   [latitude]="lat"
   [longitude]="lng"
-  [zoom]="zoom"
+  [zoom]="4"
   [disableDefaultUI]="false"
   [zoomControl]="false"
-  (mapClick)="mapClicked($event)">
+  (mapClick)="mapClicked($event)"
+  >
 
   <agm-marker 
       *ngFor="let m of markers; let i = index"
       (markerClick)="clickedMarker(m.label, i)"
       [latitude]="m.lat"
       [longitude]="m.lng"
-      [label]="m.label"
       [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)">
-      
+      (dragEnd)="markerDragEnd(m, $event)"
+      [title]="m.title">
     <agm-info-window>
-      <strong>InfoWindow content</strong>
+      <strong >{{m.title}}</strong>
     </agm-info-window>
     
   </agm-marker>
   
-  <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+  <!-- agm marker prop below -->
+  <!-- [label]="m.title" -->
+
+  <!-- <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
       [radius]="5000"
       [fillColor]="'red'"
       [circleDraggable]="true"
       [editable]="true">
-  </agm-circle>
+  </agm-circle> -->
 
 </agm-map>
 
