@@ -23,7 +23,7 @@ export class AboutComponent implements OnInit {
   }
 
 
-  // title: string = 'Angular Parks API Code Challenge';
+  title: string = 'Angular Parks API Code Challenge';
   // lat: number = 36.8508;
   // lng: number = -76.2859;
 

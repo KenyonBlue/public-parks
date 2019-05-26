@@ -9,6 +9,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
+import {ScrollDispatchModule} from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { AgmCoreModule } from '@agm/core';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    ScrollDispatchModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA1fzayFMXgPHPoxixavteX8OJnpoTLsOI'
     })
