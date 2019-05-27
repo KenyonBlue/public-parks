@@ -1,49 +1,60 @@
-agm-map {
-    height: 300px;
-    width: 600px;
-  }
-  
-  
-  * {
-    font-family: Lato;
-  }
-  
- h1 {
-   margin-top: 5px;
- }
+
+
+  .main {
+    display: block;
+
+    agm-map {
+      height: 300px;
+      width: 570px;
+      float: left;
+    }
+    
+    .viewport {
+      height: 300px;
+      width: 30%;
+      border: 1px solid black;
+      overflow-x: hidden; 
+      float: right;
+      right: 3px
+    }
  
-  a {
-    color: darkblue;
-  }
+    * {
+      font-family: Lato;
+    }
+    
+   h1 {
+     margin-top: 5px;
+   }
+   
+    a {
+      color: darkblue;
+    }
+  
+    agm-marker { text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+  
+  li {
+    margin: 10px;
+  
+    .fullName {
+      font-size: 14px;
+      font-weight: bold;
+    }
+  
+    .latLong {
+      font-size: 10px;
+      color: darkgreen;
+  
+    }
+  
+    .description {
+      font-size: 12px,
+  
+    }
+  
+    p {
+      margin: 4px;
+    }
+  
+  }  
 
-  agm-marker { text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
-
-li {
-  margin: 10px;
-
-  .fullName {
-    font-size: 14px,
-
-  }
-
-  .latLong {
-    font-size: 10px,
-
-  }
-
-  .description {
-    font-size: 12px,
-
-  }
-
-  p {
-    margin: 4px;
-  }
-
-}
-
-  .viewport {
-    height: 50vh;
-    border: 1px solid black;
-    overflow-x: hidden; 
   }

@@ -1,8 +1,18 @@
+.header {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 1px 5px black;
+    
+}
+
 header {
-    background: hsl(212, 100%, 50%);
+    // background: hsl(212, 100%, 50%);
+    background: #d2d5d9;
+
 
     .logo {
         font-weight: bold;
+        color: black;
     }
 
     nav {
@@ -12,6 +22,7 @@ header {
             list-style-type: none;
             margin: 0; padding: 0;
             
+            
             li {
                 float: left;
 
@@ -19,6 +30,7 @@ header {
                     padding: 1.5em;
                     text-transform: uppercase;
                     font-size: .8em;
+                    color: black;
 
                     &:hover {
                         background: rgb(24, 135, 209)

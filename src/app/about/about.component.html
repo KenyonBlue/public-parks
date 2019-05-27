@@ -1,59 +1,59 @@
 <h1>{{ title }}</h1>
-<div>
+<div class="main">
 
+    <agm-map 
+    [latitude]="lat"
+    [longitude]="lng"
+    [zoom]="4"
+    [disableDefaultUI]="false"
+    [zoomControl]="false"
+    (mapClick)="mapClicked($event)"
+    >
   
-</div>
-<agm-map 
-  [latitude]="lat"
-  [longitude]="lng"
-  [zoom]="4"
-  [disableDefaultUI]="false"
-  [zoomControl]="false"
-  (mapClick)="mapClicked($event)"
-  >
-
-  <agm-marker 
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(m.label, i)"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)"
-      [title]="m.title">
-    <agm-info-window>
-      <strong >{{m.title}}</strong>
-    </agm-info-window>
+    <agm-marker 
+        *ngFor="let m of markers; let i = index"
+        (markerClick)="clickedMarker(m.label, i)"
+        [latitude]="m.lat"
+        [longitude]="m.lng"
+        [markerDraggable]="m.draggable"
+        (dragEnd)="markerDragEnd(m, $event)"
+        [title]="m.title">
+      <agm-info-window>
+        <strong >{{m.title}}</strong>
+      </agm-info-window>
+      
+    </agm-marker>
     
-  </agm-marker>
+    <!-- agm marker prop below -->
+    <!-- [label]="m.title" -->
   
-  <!-- agm marker prop below -->
-  <!-- [label]="m.title" -->
-
-  <!-- <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
-      [radius]="5000"
-      [fillColor]="'red'"
-      [circleDraggable]="true"
-      [editable]="true">
-  </agm-circle> -->
-
-</agm-map>
-
-<!-- <ul *ngIf="parks">
-  <li *ngFor="let park of parks.data">
-    <p class="fullName">{{ park.fullName }} </p>
-    <p class="latLong">{{ park.latLong }} </p>
-    <p  class="description">{{ park.description }} </p>
-  </li>
-</ul> -->
-
-<cdk-virtual-scroll-viewport itemSize='5' class="viewport">
-
-  <ul *ngIf="parks">
-    <li *ngFor="let park of parks.data" class="animated slideInRight">
+    <!-- <agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+        [radius]="5000"
+        [fillColor]="'red'"
+        [circleDraggable]="true"
+        [editable]="true">
+    </agm-circle> -->
+  
+  </agm-map>
+  
+  <!-- <ul *ngIf="parks">
+    <li *ngFor="let park of parks.data">
       <p class="fullName">{{ park.fullName }} </p>
       <p class="latLong">{{ park.latLong }} </p>
       <p  class="description">{{ park.description }} </p>
     </li>
-  </ul>
+  </ul> -->
+  
+  <cdk-virtual-scroll-viewport itemSize='5' class="viewport">
+  
+    <ul *ngIf="parks">
+      <li *ngFor="let park of parks.data" class="animated slideInRight">
+        <p class="fullName">{{ park.fullName }} </p>
+        <p class="latLong">{{ park.latLong }} </p>
+        <p  class="description">{{ park.description }} </p>
+      </li>
+    </ul>
+  
+  </cdk-virtual-scroll-viewport>
 
-</cdk-virtual-scroll-viewport>
+</div>
