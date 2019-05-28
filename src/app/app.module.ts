@@ -10,6 +10,10 @@ import { ContactComponent } from './contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import {ScrollDispatchModule} from '@angular/cdk/scrolling';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -17,17 +21,25 @@ import {ScrollDispatchModule} from '@angular/cdk/scrolling';
     NavComponent,
     AboutComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
     ScrollDispatchModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyA1fzayFMXgPHPoxixavteX8OJnpoTLsOI'
-    })
+    }),
+    LayoutModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
