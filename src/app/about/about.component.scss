@@ -1,21 +1,52 @@
 
+.projectLabel {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  margin-left: 0 auto;
+  margin-right:0 auto;
+  justify-content: space-evenly;
 
+  .title {
+    padding-top: 3em;
+    color: #fff;
+    font-size: 18px;
+  }
+
+  .title1 {
+    padding-top: 3em;
+    color: #fff;
+    font-size: 18px;
+  }
+
+}
+
+  
   .main {
-    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    
+
+    .styleMap {
+      opacity: .7;
+      
+    }
 
     agm-map {
       height: 300px;
       width: 570px;
       float: left;
+      border: 2px solid #00f200;
     }
     
     .viewport {
       height: 300px;
       width: 30%;
-      border: 1px solid black;
-      overflow-x: hidden; 
+      border: 2px solid #00f200;
+       
       float: right;
-      right: 3px
+      right: 3px;
+      background-color: rgba(0, 0, 0, 0.6);
     }
  
     * {
@@ -31,24 +62,33 @@
     }
   
     agm-marker { text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff; }
+
+   ul {
+    list-style-type: none;
+   } 
   
   li {
     margin: 10px;
+    padding-top: 10px;
+
+    
   
     .fullName {
       font-size: 14px;
       font-weight: bold;
+      color: #fff;
+      text-align: center;
     }
   
     .latLong {
       font-size: 10px;
-      color: darkgreen;
+      color: #00f200;
   
     }
   
     .description {
-      font-size: 12px,
-  
+      font-size: 12px;
+      color: #c3c3c3;
     }
   
     p {
@@ -58,3 +98,5 @@
   }  
 
   }
+
+  // overflow-x: hidden; this was in the viewport style    ?

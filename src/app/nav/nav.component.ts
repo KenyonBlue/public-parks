@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  appTitle: string = "Kenyon B. Code Challenge";
+  appTitle: string = "Kenyon B. logo signature here";
 
   // appTitle = 'kenyonApp';
 

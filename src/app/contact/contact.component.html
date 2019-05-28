@@ -1,37 +1,60 @@
-<h1>Contact us</h1>
 
-<form [formGroup]="messageForm" (ngSubmit)="onSubmit()">
-  <h5 *ngIf="success"> Your form has been submittied </h5>
 
-  <label >
-    name: 
-    <input type="text" formControlName="name">
-    <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
-      <div *ngIf="messageForm.controls.name.errors.required">
-        your name is required bro
+<div class="main">
+
+  <div class="title">
+    <!-- take up full width -->
+      <h1 class="titleProcess">The Process</h1>
+  </div>
+
+   
+   <div class="step1">
+     <!-- take up full width -->
+     <img src="./../../assets/images/researchIcon3.png" class="ReImage">
+     <div class="content">
+      <h1> Research </h1>
+      <p> First task was to re-familarize myself with the angular framework by using the
+        <a href="https://angular.io/docs">Angular JS Docs</a>. The documentation provided a 
+        refresher to architecture, components and of course the use of HttpClient to fetch API's.  
+      </p>
+     </div>
+   </div>
+
+   <div class="step1">
+      <!-- take up full width -->
+      <img src="./../../assets/images/code.png" class="impImage">
+      <div class="content">
+       <h1> Implimentation </h1>
+       <p>I began the project by building a basic application that utilized a home, about , and contact page. Each 
+         having functionallity that re-familiarize me with the framework befor moving toward api integration. 
+       </p>
+       <p> I used the first public park API available which was 
+         <a href="https://www.nps.gov/subjects/developer/index.htm">National Park Service</a>. 
+         The documetation wasn't the most comprehensive and honesty had missing documentation
+         that had been previously available for earlier versions which i found trough research via 
+         stack overflow. 
+       </p> 
+       <p>
+        <a href="https://angular-maps.com/">Angular Google maps</a> (AGM) was an excellent map API with 
+        good documentation and plenty of github uses that i was able to impliment and make use of. 
+       </p>
       </div>
     </div>
-  </label>
 
-  <label >
-    message: 
-    <input type="text" formControlName="message">
-    <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-      <div *ngIf="messageForm.controls.message.errors.required">
-        a message is required bro
+    <div class="step1">
+        <!-- take up full width -->
+        <img src="./../../assets/images/css.png" class="StImage">
+        <div class="content">
+         <h1> Style </h1>
+         <p> using the <a href="https://www.w3schools.com/css/default.asp">w3schools.com</a> documentation
+          i was able to style the application using some of the latest UI/UX style available.  I also made use of
+          photoshop to quickly render a custom background and icons. 
+         </p>
+        </div>
       </div>
-    </div>
-  </label>
-
-    <input type="submit" value="send message" class="cta">
-
-</form>
-
-<div *ngIf="submitted" class="results">
-  <strong>Name:</strong>
-  <span>{{ messageForm.controls.name.value }}</span>
-
-  <strong>Message:</strong>
-  <span>{{ messageForm.controls.message.value }}</span>
 
 </div>
+
+
+
+
