@@ -2,6 +2,10 @@
   height: 100%;
 }
 
+.mat-icon-button {
+  background: none;
+}
+
 .sidenav {
   width: 200px;
 }
@@ -55,6 +59,7 @@ img {
 
 @media only screen and (max-width: 900px) {
   img {
-      display: none;
+      display: absolute;
+      padding-left: 25px;
   }
 }

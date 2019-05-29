@@ -78,3 +78,18 @@
         }
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .main {
+    
+        margin-top: 1em;
+        border: 2px solid #00f200; 
+          right: 3px;
+          background-color: rgba(0, 0, 0, 0.6);
+          width: 50%;
+
+         .titleProcess {
+             margin: 0px 0px 2px 180px;
+         }
+    }
+}

@@ -11,3 +11,13 @@
         top: 0;
         left: 0;
     }
+
+
+    @media (max-width: 768px) {
+        .testSection {
+            // border: 1px solid orange;
+            padding: 0px;
+            margin-left: 0px;
+            padding-left: 0px;
+        }
+    }
